@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-dars</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body>
+    
+        <h1 class="text-[#ffdfdb] text-[100px] tracking-[8px] text-center mt-[80px]">Just do it.</h1>
+        
+        <form class="todo-form  w-[550px] flex items-center overflow-hidden mx-auto mt-5 rounded-xl bg-black ">
+           
+                <input class=" todo-input w-[80%] p-2 text-white outline-none focus:opacity-100 opacity-60 bg-black" type="text" placeholder="Add your todo">
+            <button class="p-[8px] w-[20%] bg-[#ffdfdb] text-slate-800  font-semibold hover:bg-white hover:shadow-2xl  duration-300" type="submit">Add</button>
+        </form> 
+        
+        <div class=" w-[650px] mb-[20px] flex items-center justify-between p-2 bg-slate-900 mx-auto mt-5  rounded-[30px]">
+           <button onclick="handleAll()" class="bg-[#ffdfdb] hover:bg-white duration-300 rounded-[30px] w-[31%] py-2 text-center">ALL <span class="count-all">0</span></button> 
+           <button onclick="handleComplatedObj()" class="bg-[#ffdfdb] hover:bg-white duration-300 rounded-[30px] w-[31%] py-2 text-center">Completed <span class="complated">0</span></button> 
+           <button onclick="handleUnComplated()" class="bg-[#ffdfdb] hover:bg-white duration-300 rounded-[30px] w-[31%] py-2 text-center">Uncompleted <span class="uncomplated">0</span></button> 
+        </div>
+
+        <ul class="todo-list w-[450px] mx-auto flex-col flex items-center justify-between space-y-2"></ul>
+       
+        <div id="modal-wrapper" class="modal hidden backdrop-blur fixed inset-0 flex items-center">
+            <div class="modal-update w-[40%] mx-auto rounded-[30px] bg-black overflow-hidden  shadow-2xl flex items-center">
+                
+            </div>
+        </div>
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+</body>
+</html>
